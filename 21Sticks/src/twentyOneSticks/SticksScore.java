@@ -23,58 +23,57 @@ import javax.swing.JTextArea;
 
 public class SticksScore 
 {
-	public static SticksMain SticksMain = new SticksMain(); 
-	public static int computerWins = 0; 
-	public static int userWins = 0;
-	private static FlowLayout layout = new FlowLayout();  
+	public static SticksMain SticksMain = new SticksMain(); //accesses the code from SticksMain
+	public static int computerWins = 0; //declares and initializes computerWins
+	public static int userWins = 0; //declares and initializes userWins
+	private static FlowLayout layout = new FlowLayout(); //creates the FlowLayout
 	
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args) throws IOException //main of this class
 	{
-		//Scanner readGame = new Scanner("GameStandings.txt");
-		BufferedReader score = new BufferedReader(new FileReader("GameStandings.txt"));
-		String fileScore = score.readLine(); 
-		String filesScore = score.readLine(); 
-		score.close(); 
+		BufferedReader score = new BufferedReader(new FileReader("GameStandings.txt")); //creates a file reader
+		String fileScore = score.readLine(); //sets the String fileScore to what the file reader reads from the file
+		String filesScore = score.readLine(); //sets the String filesScore to what the file reader reads from the file
+		score.close(); //closes the file reader
 		
-		JLabel userScore = new JLabel(filesScore); 
-		JLabel computerScore = new JLabel(fileScore); 
-		JFrame displayScore = new JFrame(); 
-		JLabel scoreText = new JLabel("\nThe standings are:"); 
-		displayScore.setDefaultCloseOperation(displayScore.EXIT_ON_CLOSE);
-		displayScore.setSize(250, 200);
-		displayScore.setLayout(layout);		
-		displayScore.setLocationRelativeTo(null);
+		JLabel userScore = new JLabel(filesScore); //creates a new JLabel
+		JLabel computerScore = new JLabel(fileScore); //creates a new JLabel
+		JFrame displayScore = new JFrame(); //creates a new JFrame
+		JLabel scoreText = new JLabel("\nThe standings are:"); //creates a new JLabel
+		displayScore.setDefaultCloseOperation(displayScore.EXIT_ON_CLOSE); //sets the close operation of the JFrame
+		displayScore.setSize(250, 200); //sets size of JFrame
+		displayScore.setLayout(layout); //sets Layout of JFrame
+		displayScore.setLocationRelativeTo(null); //sets the location of the JFrame
 		
-		JButton goHome = new JButton("Return to Home"); 
-		goHome.addActionListener(
+		JButton goHome = new JButton("Return to Home"); //creates a new JButton
+		goHome.addActionListener( //adds action listener to the JButton
 				new ActionListener()
 				{
 					@SuppressWarnings("static-access")
 					public void actionPerformed(ActionEvent event)
 					{
-						displayScore.setVisible(false);
-						SticksMain.userChoice(); 
+						displayScore.setVisible(false); //sets the visibility of the JFrame to false
+						SticksMain.userChoice(); //calls the method userChoice when this button is clicked
 					}
 				}
 				);
 		
-		JButton quit = new JButton("Quit Program");
-		quit.addActionListener(
-				new ActionListener()
+		JButton quit = new JButton("Quit Program"); //creates a new JButton
+		quit.addActionListener( //adds action listener to the JButton
+				new ActionListener() 
 				{
 					public void actionPerformed(ActionEvent event)
 					{
-						System.exit(0);
+						System.exit(0); //quits the program when this button is clicked
 					}
 				}
 				);
 		
-		displayScore.add(scoreText);
-		displayScore.add(userScore); 
-		displayScore.add(computerScore);
-		displayScore.add(goHome);
-		displayScore.add(quit);
+		displayScore.add(scoreText); //adds the JLabel scoreText to the JFrame
+		displayScore.add(userScore); //adds the JLabel userScore to the JFrame
+		displayScore.add(computerScore); //adds the JLabel computerScore to the JFrame
+		displayScore.add(goHome); //adds the JButton goHome to the JFrame
+		displayScore.add(quit); //adds the JButton quit to the Jframe
 		
-		displayScore.setVisible(true);
+		displayScore.setVisible(true); //sets the visibility of the JFrame 
 	}
 }
