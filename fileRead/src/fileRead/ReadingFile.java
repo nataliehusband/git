@@ -39,6 +39,7 @@ public class ReadingFile
 			birthState = scan.next(); //scans file.txt for the birth state
 			stream.println("State where user was born: " + birthState); //prints birth state from file.txt into fileout.txt
 			
+			stream.println("Your initials are: " + firstName.substring(0, 1) + "." + middleInitial + "." + lastName.substring(0, 1) + ".");
 			stream.close(); //closes the stream
 			//scan.close(); 
 		}

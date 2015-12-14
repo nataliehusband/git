@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>21Sticks</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>images/onestick.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Computer%20Science%20c++/onestick.jpg</locationURI>
+		</link>
+		<link>
+			<name>images/twosticks.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Computer%20Science%20c++/twosticks.jpg</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
