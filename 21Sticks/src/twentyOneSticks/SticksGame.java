@@ -151,6 +151,8 @@ public class SticksGame
 			playAgain = JOptionPane.showConfirmDialog(null, "Would you like to play again?"); //asks user if they want to play agian
 			
 		}while(playAgain == 0); //while the value of playAgain is equal to 0, continue this loop
+		
+		SticksMain.userChoice(); 
 	}
 	
 	public static void userwins() //method userwins
