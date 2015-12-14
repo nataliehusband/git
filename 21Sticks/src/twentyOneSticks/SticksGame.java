@@ -145,7 +145,7 @@ public class SticksGame
 							computerwins(); //calls method computerwins(); 
 						}
 					}
-				}while(numSticks >= 0); //while number of sticks is greater than or equal to 0, continue running loop
+				}while(numSticks > 0); //while number of sticks is greater than or equal to 0, continue running loop
 			}
 			
 			playAgain = JOptionPane.showConfirmDialog(null, "Would you like to play again?"); //asks user if they want to play agian

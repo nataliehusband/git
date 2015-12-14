@@ -20,7 +20,7 @@ public class SticksMain
 	
 	public static void main (String[] args) throws IOException //the main program for the sticks game
 	{
-		File ReadAccount = new File("ReadAccount.txt"); //creates a file for reading account information
+	//	File ReadAccount = new File("ReadAccount.txt"); //creates a file for reading account information
 		int account; //declares variable account as an int to be used for the JOptionPane.showConfirmDialog
 		
 		Object[] Answer = {"Create an Account", "Log in"}; //creates array for choices for the ConfirmDialog
