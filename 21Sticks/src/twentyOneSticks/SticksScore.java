@@ -26,8 +26,7 @@ public class SticksScore
 	public static SticksMain SticksMain = new SticksMain(); 
 	public static int computerWins = 0; 
 	public static int userWins = 0;
-	private static FlowLayout layout = new FlowLayout(); 
-	private static Container container; 
+	private static FlowLayout layout = new FlowLayout();  
 	
 	public static void main(String[] args) throws IOException
 	{
@@ -77,22 +76,5 @@ public class SticksScore
 		displayScore.add(quit);
 		
 		displayScore.setVisible(true);
-
-		/*int score3; 
-		Object[] score1 = {"Quit", "Return to Home"}; 
-		
-		score3 = JOptionPane.showOptionDialog(null, "The stnadings are: \n"
-				+ fileScore + "\n" + filesScore, null, JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
-				, null, score1, score1[0]);*/
-		
-		/*if(score3 == 1)
-		{
-			SticksMain.userChoice(); 
-		}
-		if(score3 == 0)
-		{
-			JOptionPane.showMessageDialog(null, "Have a nice day!");
-			System.exit(score3);
-		}*/
 	}
 }
